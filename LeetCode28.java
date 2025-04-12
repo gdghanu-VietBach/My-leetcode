@@ -15,22 +15,19 @@ public class LeetCode28 {
 				checkNeeedle++;
 
 				if (checkNeeedle == needle.length()) {
-					return checkHaystack - checkNeeedle; // nếu đã tìm ra được đoạn giống nhau, trả lại vị trí đầu tiên
-															// giống nhau
+					return checkHaystack - checkNeeedle; // nếu đã tìm ra được đoạn giống nhau, trả lại vị trí đầu tiên giống nhau
+															
 				}
 			} else {
 
-				checkHaystack = checkHaystack - checkNeeedle + 1; // có 2TH xảy ra: + TH1: Nếu đã giống nhau 1 đoạn
-																	// trước đó thì setup về vị trí tiếp theo của vtri
-																	// đầu tiên
-				checkNeeedle = 0; // giống nhau
-				// + TH2: Nếu chưa thì xét đến vtri tiếp theo (tránh
-				// vòng
-				// lặp vô hạn vì vtri xét ko thay đổi)
-
+				checkHaystack = checkHaystack - checkNeeedle + 1; // có 2TH xảy ra:
+				                                                  // + TH1: Nếu đã giống nhau 1 đoạn trước đó thì setup về vị trí tiếp theo của vtri đầu tiên giống nhau					         
+				checkNeeedle = 0; 
+				                                                 // + TH2: Nếu chưa thì xét đến vtri tiếp theo (tránh vòng lặp vô hạn vì vtri xét ko thay đổi)
+				 
 			}
 		}
-
+		
 		return -1;
 	}
 }
