@@ -23,7 +23,14 @@ public class LeetCode141 {
 	}
 
 	// Cách 2: đơn giản hơn là duyêt qua tất cả các nút rồi thêm chúng
-	// vào 1 Set, dùng .contain để check, khi vòng lặp quay lại, chắc chắn sẽ gặp
+	// vào 1 Set, dùng .contain để check, khi vòng lặp quay lại, chắc chắn sẽ gặp. Tuy nhiên cách này sẽ làm mất thêm bộ nhớ vì phải tạo Set
 
-	// Tuy nhiên cách này sẽ làm mất thêm bộ nhớ vì phải tạo Set
+
+	// *Để tìm nút bắt đầu vòng lặp, ta thực hiện như sau:
+
+	// 1. Đặt low về head, fast giữ nguyên
+	// 2. Cho 2 con trỏ tiến từng bước môt, điểm gặp nhau chắc chắn sẽ là điểm bắt
+	// đầu vòng lặp
+
+	// Giải thích: chúng chỉ có thể gặp nhau tại điểm bắt đầu vòng lặp
 }
